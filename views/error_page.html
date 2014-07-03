@@ -1,0 +1,7 @@
+{% extends './_layout.html' %}
+
+{% block content %}
+<h1>Error 500</h1>
+<p>Error message: {{ error.message }}</p>
+<p>Callstack: {{error.stack}}</p>
+{% endblock %}

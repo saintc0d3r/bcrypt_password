@@ -1,0 +1,60 @@
+{% extends './_layout.html' %}
+
+{% block header %}
+	<!-- TODO: Implement this -->
+	<h2>Password Hasher</h2><span>a simple web application to demonstrate hashing a password using node.js bcrypt library </span>
+	<hr>
+{% endblock %}
+
+{% block content %}
+	{% if validation_errors %}
+	<section>
+		<fieldset class="errors">
+			<legend><h3>Errors</h3></legend>
+			<ul>
+				{% for err in validation_errors %}
+				<li>{{err}}</li>
+				{% endfor %}
+			</ul>
+		</fieldset>
+	</section>
+	{% endif %}
+	
+	<section>
+		<!-- the form input panel -->
+		<form method="post" action="/" accept-charset="utf-8">
+			<fieldset class="inputs">
+				<legend>Hash the password here</legend>
+				<ol class="form_fields_container">
+					<li>
+						<label>Password</label>
+						<input type="password" name="password">
+					</li>
+					<li>
+						<label>#Salt's rounds</label>
+						<input type="number" name="salt_rounds" placeholder="e.g. 10000" value="{{rounds}}">
+					</li>
+					<li>						
+						<input type="submit" value="Submit">
+					</li>					
+				</ol>
+			</fieldset>
+		</form>
+	</section>
+	<section>
+		<!-- the outputs panel -->		
+		<fieldset class="outputs">
+			<legend>Hash outputs</legend>
+			<ol class="form_fields_container">
+				<li>
+					<label>Generated Salt</label>
+					<textarea rows="5" cols="50" readonly="true">{{gen_salt}}</textarea> 
+				</li>
+				<li>
+					<label>Hashed password</label>
+					<textarea rows="5" cols="50" readonly="true">{{gen_hash}}</textarea> 
+				</li>
+			</ol>
+		</fieldset>
+	</section>
+{% endblock %}

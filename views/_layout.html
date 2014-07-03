@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>.:: Password Hasher using Bcrypt ::.</title>
+	<style type="text/css">
+		ol.form_fields_container{
+			padding:0;
+			margin: 2px;
+			list-style: none;
+		}
+
+		ol.form_fields_container li{
+			padding: 0;
+			clear: both;
+			margin: 0 0 10px 0;
+		}
+
+		ol.form_fields_container label {
+			width: 150px;
+			float: left;
+			text-align: right;
+			margin: 0 10px 0 0;
+		}
+
+		ol.form_fields_container input[type=submit] {
+			float: right;
+		}
+
+		fieldset.inputs{
+			width: 330px;
+			margin-top: 20px;
+		}
+
+		fieldset.outputs{
+			width: 600px;
+			margin-top: 20px;
+		}
+
+		fieldset.errors, fieldset.errors li{
+			color: #BA0606;
+		}
+
+		body {
+			width:50%;
+			margin:15px auto;
+			font-family: Arial, "MS Trebuchet", sans-serif;
+		}
+
+		footer{
+			clear: both;
+			width: 100%;	
+			display: block;
+			text-align: center;
+			margin-top: 50px;			
+		}
+	</style>
+</head>
+<body>
+	<header>{% block header %}{% endblock %}</header>
+	{% block content %}{% endblock %}
+	<footer>
+		<p>© 2014 Wendy Sanarwanto (saintc0d3r@gmail.com).</p>
+	</footer>
+</body>
+</html>
