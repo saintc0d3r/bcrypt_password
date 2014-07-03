@@ -30,7 +30,6 @@ module.exports = function(app){
 		console.log('[DEBUG] - Submitted values = ');
 		console.dir({'password':password, 'salt_rounds': salt_rounds});
 
-		// TODO: validate submitted values
 		var validation_errors = {};
 		if (validateInputs(password, salt_rounds, validation_errors)){
 			// Process request using bcrypt
