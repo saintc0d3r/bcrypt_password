@@ -2,8 +2,8 @@ bcrypt_password
 ===============
 a simple web application to demonstrate hashing a password using node.js bcrypt library.
 
-HOW TO - Setup & this web application:
-======================================
+HOW TO - Setup & run this web application:
+==========================================
 1. Open your terminal box ( press CTL+ALT+T if you are in GUI mode ).
 2. Change directory to a folder where you are going to put the source code in.
 3. Type & run this command: git clone https://github.com/saintc0d3r/bcrypt_password.git
