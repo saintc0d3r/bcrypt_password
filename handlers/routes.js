@@ -53,6 +53,7 @@ module.exports = function(app){
 
 	// ------------- Helpers ---------------
 	this.validateInputs = function(password, salt_rounds, errs){
+		"use strict";
 		var regex_password = new RegExp('^[a-zA-Z0-9_]{3,}$');
 		var regex_salt_rounds = new RegExp('^[0-9]{4,}$');		
 
